@@ -33,6 +33,6 @@ func TestFileGetContents(t *testing.T) {
 	Convey("Filesystem should err", t, func() {
 		_, err := FileGetContents(failTest)
 
-		So(err.Error(), ShouldContainSubstring, "The system cannot find the file specified.")
+		So(err.Error(), ShouldContainSubstring, "open "+failTest)
 	})
 }
